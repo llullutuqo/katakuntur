@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormTabla</class>
+ <widget class="QWidget" name="FormTabla">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>485</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Propiedades de entidad</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tbModelo">
+      <attribute name="title">
+       <string>Modelo</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Nombre:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="leTabla"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QPushButton" name="pbAgregar">
+             <property name="toolTip">
+              <string>Agregar un nuevo atributo(CTRL + N).</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../i16x.qrc">
+               <normaloff>:/icons/images/list-add.png</normaloff>:/icons/images/list-add.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pbEliminar">
+             <property name="toolTip">
+              <string>Eliminar atributos seleccionados.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../i16x.qrc">
+               <normaloff>:/icons/images/list-remove.png</normaloff>:/icons/images/list-remove.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pbMoverArriba">
+             <property name="toolTip">
+              <string>Subir un nivel al atributo seleccionado.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../i16x.qrc">
+               <normaloff>:/icons/images/go-up.png</normaloff>:/icons/images/go-up.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pbMoverAbajo">
+             <property name="toolTip">
+              <string>Bajar un nivel al atributo seleccionado.</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="../i16x.qrc">
+               <normaloff>:/icons/images/go-down.png</normaloff>:/icons/images/go-down.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="ColumnEditor" name="tablita">
+           <property name="editTriggers">
+            <set>QAbstractItemView::CurrentChanged</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tbGenerico">
+      <attribute name="title">
+       <string>Genérico</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Descripción</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPlainTextEdit" name="pteDescripcion"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ColumnEditor</class>
+   <extends>QTableView</extends>
+   <header>editores/columneditor.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../i16x.qrc"/>
+ </resources>
+ <connections/>
+</ui>

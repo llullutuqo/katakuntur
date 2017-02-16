@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>615</width>
+    <height>552</height>
+   </rect>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="i16x.qrc">
+    <normaloff>:/icons/images/ico.png</normaloff>:/icons/images/ico.png</iconset>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>Barra principal</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNuevo"/>
+   <addaction name="actionAbrir"/>
+   <addaction name="actionGuardar"/>
+   <addaction name="separator"/>
+   <addaction name="actionExportar_a_DBMS"/>
+   <addaction name="actionVerificar_diagrama"/>
+   <addaction name="actionExportar_ORM"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoom_Out"/>
+   <addaction name="actionZoom_In"/>
+   <addaction name="separator"/>
+   <addaction name="actionCopiar"/>
+   <addaction name="actionDuplicar"/>
+   <addaction name="actionCortar"/>
+   <addaction name="actionPegar"/>
+   <addaction name="separator"/>
+   <addaction name="actionDesplazar"/>
+   <addaction name="actionSeleccionar"/>
+   <addaction name="actionAgregar_relacion"/>
+   <addaction name="actionAgregar_tabla"/>
+   <addaction name="actionEliminar"/>
+   <addaction name="separator"/>
+   <addaction name="actionAcerca_de"/>
+   <addaction name="actionFacebook"/>
+   <addaction name="actionDonar"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>615</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuEditar">
+    <property name="title">
+     <string>Editar</string>
+    </property>
+    <addaction name="actionCopiar"/>
+    <addaction name="actionDuplicar"/>
+    <addaction name="actionCortar"/>
+    <addaction name="actionPegar"/>
+    <addaction name="separator"/>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="actionLimpiar_historial"/>
+    <addaction name="separator"/>
+    <addaction name="actionPropiedades_de_diagrama"/>
+   </widget>
+   <widget class="QMenu" name="menuHerramientas">
+    <property name="title">
+     <string>Herramientas</string>
+    </property>
+    <widget class="QMenu" name="menuConfiguraci_n_de_Lenguaje">
+     <property name="title">
+      <string>Configuración de Lenguaje</string>
+     </property>
+     <addaction name="actionEspa_ol"/>
+     <addaction name="actionEnglish"/>
+    </widget>
+    <addaction name="menuConfiguraci_n_de_Lenguaje"/>
+    <addaction name="actionPreferencias"/>
+   </widget>
+   <widget class="QMenu" name="menuDiagrama">
+    <property name="title">
+     <string>Diagrama</string>
+    </property>
+    <addaction name="actionDesplazar"/>
+    <addaction name="actionSeleccionar"/>
+    <addaction name="actionAgregar_relacion"/>
+    <addaction name="actionAgregar_tabla"/>
+    <addaction name="actionEliminar"/>
+    <addaction name="separator"/>
+    <addaction name="actionZoom_In"/>
+    <addaction name="actionZoom_Out"/>
+   </widget>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <widget class="QMenu" name="menuDiagramas_recientes">
+     <property name="title">
+      <string>Diagramas recientes</string>
+     </property>
+     <addaction name="actionBorrar_archivos_recientes"/>
+     <addaction name="separator"/>
+    </widget>
+    <widget class="QMenu" name="menuExportar_Diagrama">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Exportar Diagrama</string>
+     </property>
+     <addaction name="printDiagram"/>
+     <addaction name="actionDiccionario_de_dato"/>
+     <addaction name="actionExportarSQL"/>
+     <addaction name="actionExportarPNG"/>
+     <addaction name="action_yml"/>
+    </widget>
+    <widget class="QMenu" name="menuExportar_mapeo">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Exportar Mapeo</string>
+     </property>
+     <addaction name="actionImprimirMapeo"/>
+     <addaction name="action_ppng"/>
+     <addaction name="actionODT"/>
+    </widget>
+    <addaction name="actionNuevo"/>
+    <addaction name="actionAbrir"/>
+    <addaction name="menuDiagramas_recientes"/>
+    <addaction name="separator"/>
+    <addaction name="actionGuardar"/>
+    <addaction name="actionGuardar_Como"/>
+    <addaction name="separator"/>
+    <addaction name="menuExportar_Diagrama"/>
+    <addaction name="menuExportar_mapeo"/>
+    <addaction name="actionExportar_a_DBMS"/>
+    <addaction name="actionExportar_ORM"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionP_gina_oficial"/>
+    <addaction name="actionManual_de_ayuda"/>
+    <addaction name="actionReportar_errores"/>
+    <addaction name="actionDonar"/>
+    <addaction name="separator"/>
+    <addaction name="actionAcerca_de"/>
+   </widget>
+   <widget class="QMenu" name="menuVer">
+    <property name="title">
+     <string>Ver</string>
+    </property>
+    <addaction name="actionPantalla_completa"/>
+    <addaction name="actionBarra_de_acciones"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuVer"/>
+   <addaction name="menuEditar"/>
+   <addaction name="menuDiagrama"/>
+   <addaction name="menuHerramientas"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidgetUndo">
+   <property name="windowTitle">
+    <string>Acciones</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents"/>
+  </widget>
+  <action name="actionSalir">
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/application-exit.png</normaloff>:/icons/images/application-exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionGuardar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/document-save.png</normaloff>:/icons/images/document-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionNuevo">
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/document-new.png</normaloff>:/icons/images/document-new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nuevo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionGuardar_Como">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/document-save-as.png</normaloff>:/icons/images/document-save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar como</string>
+   </property>
+   <property name="toolTip">
+    <string>Guardar como</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+S</string>
+   </property>
+  </action>
+  <action name="actionAbrir">
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/document-open.png</normaloff>:/icons/images/document-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSeleccionar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/edit-select.png</normaloff>:/icons/images/edit-select.png</iconset>
+   </property>
+   <property name="text">
+    <string>Seleccionar</string>
+   </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
+  </action>
+  <action name="actionAgregar_relacion">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/draw-relation.png</normaloff>:/icons/images/draw-relation.png</iconset>
+   </property>
+   <property name="text">
+    <string>Agregar relación</string>
+   </property>
+   <property name="shortcut">
+    <string>R</string>
+   </property>
+  </action>
+  <action name="actionAgregar_tabla">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/draw-table.png</normaloff>:/icons/images/draw-table.png</iconset>
+   </property>
+   <property name="text">
+    <string>Agregar entidad</string>
+   </property>
+   <property name="toolTip">
+    <string>Permite agregar una nueva entidad.</string>
+   </property>
+   <property name="shortcut">
+    <string>T</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de">
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/help-about.png</normaloff>:/icons/images/help-about.png</iconset>
+   </property>
+   <property name="text">
+    <string>Acerca de...</string>
+   </property>
+  </action>
+  <action name="actionCopiar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/edit-copy.png</normaloff>:/icons/images/edit-copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copiar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionCortar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/edit-cut.png</normaloff>:/icons/images/edit-cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cortar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionPegar">
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/edit-paste.png</normaloff>:/icons/images/edit-paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pegar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/edit-undo.png</normaloff>:/icons/images/edit-undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Deshacer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/edit-redo.png</normaloff>:/icons/images/edit-redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rehacer</string>
+   </property>
+   <property name="toolTip">
+    <string>Rehacer</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="actionPantalla_completa">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/view-fullscreen.png</normaloff>:/icons/images/view-fullscreen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pantalla completa</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actionZoom_In">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/zoom-in.png</normaloff>:/icons/images/zoom-in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Acercar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Up</string>
+   </property>
+  </action>
+  <action name="actionZoom_Out">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/zoom-out.png</normaloff>:/icons/images/zoom-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Alejar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Down</string>
+   </property>
+  </action>
+  <action name="actionEspa_ol">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Español</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="actionPropiedades_de_diagrama">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Propiedades de diagrama</string>
+   </property>
+  </action>
+  <action name="actionExportar_a_DBMS">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/export-sql.png</normaloff>:/icons/images/export-sql.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exportar a SGBD</string>
+   </property>
+  </action>
+  <action name="actionEliminar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/edit-delete.png</normaloff>:/icons/images/edit-delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Eliminar seleccionados</string>
+   </property>
+   <property name="shortcut">
+    <string>D</string>
+   </property>
+  </action>
+  <action name="actionExportarSQL">
+   <property name="text">
+    <string>*.sql</string>
+   </property>
+  </action>
+  <action name="actionExportarPNG">
+   <property name="text">
+    <string>*.png</string>
+   </property>
+  </action>
+  <action name="actionImprimirMapeo">
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/document-print.png</normaloff>:/icons/images/document-print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Imprimir</string>
+   </property>
+  </action>
+  <action name="actionODT">
+   <property name="text">
+    <string>*.odt</string>
+   </property>
+  </action>
+  <action name="printDiagram">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/document-print.png</normaloff>:/icons/images/document-print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Imprimir</string>
+   </property>
+  </action>
+  <action name="action_yml">
+   <property name="text">
+    <string>YAML - Propel</string>
+   </property>
+   <property name="toolTip">
+    <string>YAML - Propel</string>
+   </property>
+  </action>
+  <action name="actionVerificar_diagrama">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/check.png</normaloff>:/icons/images/check.png</iconset>
+   </property>
+   <property name="text">
+    <string>Verificar diagrama.</string>
+   </property>
+   <property name="toolTip">
+    <string>Verificar diagrama.</string>
+   </property>
+  </action>
+  <action name="action_ppng">
+   <property name="text">
+    <string>*.png</string>
+   </property>
+  </action>
+  <action name="actionPreferencias">
+   <property name="text">
+    <string>Preferencias</string>
+   </property>
+  </action>
+  <action name="actionExportar_ORM">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/export-orm.png</normaloff>:/icons/images/export-orm.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exportar ORM</string>
+   </property>
+  </action>
+  <action name="actionP_gina_oficial">
+   <property name="text">
+    <string>Página oficial</string>
+   </property>
+  </action>
+  <action name="actionAgregar_Vista">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/vista.png</normaloff>:/icons/images/vista.png</iconset>
+   </property>
+   <property name="text">
+    <string>Agregar Vista</string>
+   </property>
+   <property name="shortcut">
+    <string>V</string>
+   </property>
+  </action>
+  <action name="actionDuplicar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/edit-duplicate.png</normaloff>:/icons/images/edit-duplicate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Duplicar</string>
+   </property>
+   <property name="toolTip">
+    <string>Duplica los items seleccionados</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionDesplazar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/transform-move.png</normaloff>:/icons/images/transform-move.png</iconset>
+   </property>
+   <property name="text">
+    <string>Desplazar</string>
+   </property>
+   <property name="toolTip">
+    <string>Desplazar el diagrama.</string>
+   </property>
+   <property name="shortcut">
+    <string>E</string>
+   </property>
+  </action>
+  <action name="actionFacebook">
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/facebook_icon.png</normaloff>:/icons/images/facebook_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>facebook</string>
+   </property>
+   <property name="toolTip">
+    <string>Hazte fan en facebook.</string>
+   </property>
+  </action>
+  <action name="actionManual_de_ayuda">
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/help-contents.png</normaloff>:/icons/images/help-contents.png</iconset>
+   </property>
+   <property name="text">
+    <string>Manual de ayuda</string>
+   </property>
+  </action>
+  <action name="actionReportar_errores">
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/tools-report-bug.png</normaloff>:/icons/images/tools-report-bug.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reportar errores</string>
+   </property>
+  </action>
+  <action name="actionBorrar_archivos_recientes">
+   <property name="text">
+    <string>Borrar archivos recientes</string>
+   </property>
+  </action>
+  <action name="actionDonar">
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/donate.png</normaloff>:/icons/images/donate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Donar</string>
+   </property>
+   <property name="toolTip">
+    <string>Puedes apoyar con el desarrollo de Kata Kuntur</string>
+   </property>
+  </action>
+  <action name="actionLimpiar_historial">
+   <property name="icon">
+    <iconset resource="i16x.qrc">
+     <normaloff>:/icons/images/edit-clear.png</normaloff>:/icons/images/edit-clear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Limpiar historial</string>
+   </property>
+   <property name="toolTip">
+    <string>Limpia el historial de acciones</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+K</string>
+   </property>
+  </action>
+  <action name="actionBarra_de_acciones">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Panel de acciones</string>
+   </property>
+   <property name="toolTip">
+    <string>Panel de acciones</string>
+   </property>
+  </action>
+  <action name="actionDiccionario_de_dato">
+   <property name="text">
+    <string>Diccionario de datos</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="i16x.qrc"/>
+ </resources>
+ <connections/>
+</ui>

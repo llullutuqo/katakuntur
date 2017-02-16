@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/server-database.png</file>
+        <file>icons/view-form-table.png</file>
+        <file>icons/configure-conection.png</file>
+        <file>icons/run-sql.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>skin/style.css</file>
+        <file>skin/arrow-down.png</file>
+        <file>skin/arrow-left.png</file>
+        <file>skin/arrow-right.png</file>
+        <file>skin/arrow-up.png</file>
+        <file>skin/pushbutton_pressed.png</file>
+        <file>skin/pushbutton.png</file>
+        <file>skin/pushbutton_hover.png</file>
+        <file>skin/disable-down.png</file>
+        <file>skin/chk_hover.png</file>
+        <file>skin/chk_normal.png</file>
+        <file>skin/chk_pressed.png</file>
+        <file>skin/chk_ch_pressed.png</file>
+        <file>skin/chk_ch_hover.png</file>
+        <file>skin/chk_ch_normal.png</file>
+        <file>skin/grip.png</file>
+    </qresource>
+</RCC>

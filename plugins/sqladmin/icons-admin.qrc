@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/server-database.png</file>
+        <file>icons/view-form-table.png</file>
+        <file>icons/configure-conection.png</file>
+        <file>icons/run-sql.png</file>
+        <file>icons/icon.png</file>
+        <file>icons/document-new.png</file>
+        <file>icons/column.png</file>
+        <file>icons/refresh-database.png</file>
+        <file>icons/llavePK.png</file>
+        <file>icons/llaveFK.png</file>
+        <file>icons/connection-disconnect.png</file>
+        <file>icons/connection-connect.png</file>
+    </qresource>
+</RCC>

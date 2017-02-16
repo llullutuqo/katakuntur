@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SQLAdmin</class>
+ <widget class="QMainWindow" name="SQLAdmin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Administrador de Consultas</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons-admin.qrc">
+    <normaloff>:/icons/icon.png</normaloff>:/icons/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionConectarse"/>
+   <addaction name="actionNuevo"/>
+   <addaction name="separator"/>
+   <addaction name="actionActualizar_lista_de_Bases_de_Datos"/>
+   <addaction name="actionEjecutar_SQL"/>
+  </widget>
+  <action name="actionConectarse">
+   <property name="icon">
+    <iconset resource="icons-admin.qrc">
+     <normaloff>:/icons/configure-conection.png</normaloff>:/icons/configure-conection.png</iconset>
+   </property>
+   <property name="text">
+    <string>Conectarse</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionContenido_de_Ayuda">
+   <property name="text">
+    <string>Contenido de Ayuda</string>
+   </property>
+  </action>
+  <action name="actionEjecutar_SQL">
+   <property name="icon">
+    <iconset resource="icons-admin.qrc">
+     <normaloff>:/icons/run-sql.png</normaloff>:/icons/run-sql.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ejecutar SQL</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="actionNuevo">
+   <property name="icon">
+    <iconset resource="icons-admin.qrc">
+     <normaloff>:/icons/document-new.png</normaloff>:/icons/document-new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nuevo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionActualizar_lista_de_Bases_de_Datos">
+   <property name="icon">
+    <iconset resource="icons-admin.qrc">
+     <normaloff>:/icons/refresh-database.png</normaloff>:/icons/refresh-database.png</iconset>
+   </property>
+   <property name="text">
+    <string>Actualizar lista de Bases de Datos</string>
+   </property>
+   <property name="toolTip">
+    <string>Actualizar lista de Bases de Datos</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons-admin.qrc"/>
+ </resources>
+ <connections/>
+</ui>
