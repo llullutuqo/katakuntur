@@ -31,6 +31,7 @@
 #include <QUuid>
 #include <QFileInfo>
 #include <QGraphicsScene>
+#include <QGraphicsItem>
 #include "diagramitems_global.h"
 class ItemMovible;
 class Linea;
